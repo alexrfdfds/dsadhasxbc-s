@@ -1,0 +1,11 @@
+docker run -d \
+  --name pc-nube \
+  -p 3000:3000 \
+  -e PUID=1000 \
+  -e PGID=1000 \
+  -e TZ=America/El_Salvador \
+  -e SUBFOLDER=/ \
+  -e TITLE=PC-Cloud \
+  --shm-size="1gb" \
+  --restart unless-stopped \
+  lscr.io/linuxserver/webtop:ubuntu-xfce
